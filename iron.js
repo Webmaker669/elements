@@ -1,24 +1,22 @@
-function createElementButton(element) {
-    ...
-    var categoryDiv = document.getElementById("category-"+elements[element].category);
-    if (categoryDiv === null) {
-        createCategoryDiv(elements[element].category);
-        categoryDiv = document.getElementById("category-"+elements[element].category);
-        categoryDiv.style.display = "none";
-    }
-    categoryDiv.appendChild(button);
-}
+elements.iron = {
+    name: "Iron",
+    color: "#71797E",
+    behavior: behaviors.WALL,
+    category: "solids",
+    density: 7874,
+    temp: 20,
+    tempHigh: 1538,
+    stateHigh: "molten_iron",
+};
 
-function createCategoryDiv(category) {
-    categoryButton = document.createElement("button");
-    categoryButton.id = "categoryButton-"+category;
-    categoryButton.innerText = (lang[category] || category)...title-cased...
-    categoryButton.className = "categoryButton";
-    categoryButton.setAttribute("category",category);
-    ...
-    document.getElementById("categoryControls").appendChild(categoryButton);
-    var categoryDiv = document.createElement("div");
-    categoryDiv.setAttribute("id","category-"+category);
-    ...
-    document.getElementById("elementControls").appendChild(categoryDiv);
-}
+elements.molten_iron = {
+    name: "Molten Iron",
+    color: "#ff4500",
+    behavior: behaviors.LIQUID,
+    category: "liquids",
+    density: 6980,
+    temp: 1600,
+    tempLow: 1538,
+    stateLow: "iron",
+    fireColor: "#ff4500",
+};
