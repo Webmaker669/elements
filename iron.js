@@ -1,4 +1,4 @@
-elements.iron = {
+elements.coblot = {
     name: "Coblot",
     color: "#71797E",
     behavior: behaviors.WALL,
@@ -9,14 +9,14 @@ elements.iron = {
     stateHigh: "molten_coblot",
 };
 
-elements.molten_iron = {
-    name: "Molten Iron",
+elements.molten_coblot = {
+    name: "Molten Coblot",
     color: "#ff4500",
     behavior: behaviors.LIQUID,
     category: "liquids",
     density: 6980,
     temp: 1600,
     tempLow: 1538,
-    stateLow: "iron",
+    stateLow: "coblot",
     fireColor: "#ff4500",
 };
