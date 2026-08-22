@@ -1,12 +1,12 @@
 elements.iron = {
-    name: "Iron",
+    name: "Coblot",
     color: "#71797E",
     behavior: behaviors.WALL,
     category: "solids",
     density: 7874,
     temp: 20,
     tempHigh: 1538,
-    stateHigh: "molten_iron",
+    stateHigh: "molten_coblot",
 };
 
 elements.molten_iron = {
