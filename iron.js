@@ -1,15 +1,15 @@
-// 1. Properly add the category to Sandboxels' category list if it isn't already there
+// Ensure the categories list includes your custom tab
 if (!elementCategories.includes("metals")) {
     elementCategories.push("metals");
 }
 
-// 2. Define the visual properties of your custom tab
-elementCategories.metals = {
+// Set up the tab properties
+elementCategories["metals"] = {
     name: "Metals",
     color: "#4a5d4e",
 };
 
-// 3. Add Iron
+// Define Iron
 elements.iron = {
     name: "Iron",
     color: "#71797E",
@@ -21,7 +21,7 @@ elements.iron = {
     stateHigh: "molten_iron",
 };
 
-// 4. Add Molten Iron
+// Define Molten Iron
 elements.molten_iron = {
     name: "Molten Iron",
     color: "#ff4500",
