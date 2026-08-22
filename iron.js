@@ -1,15 +1,12 @@
-// Ensure the categories list includes your custom tab
 if (!elementCategories.includes("metals")) {
     elementCategories.push("metals");
 }
 
-// Set up the tab properties
 elementCategories["metals"] = {
     name: "Metals",
     color: "#4a5d4e",
 };
 
-// Define Iron
 elements.iron = {
     name: "Iron",
     color: "#71797E",
@@ -21,7 +18,6 @@ elements.iron = {
     stateHigh: "molten_iron",
 };
 
-// Define Molten Iron
 elements.molten_iron = {
     name: "Molten Iron",
     color: "#ff4500",
