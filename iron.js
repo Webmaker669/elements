@@ -82,6 +82,14 @@ elements.mustard_water = {
     density: 1060
 };
 
+elements.soapy_water = {
+    color: "#e6f2ff",
+    behavior: behaviors.LIQUID,
+    category: "liquids",
+    state: "liquid",
+    density: 1040
+};
+
 // Reactions:
 elements.sugar_stick = {
     color: "#ffffff",
