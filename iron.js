@@ -1,51 +1,32 @@
-elements.iron = {
-    color: ["#71797E", "#5A6165", "#8C9296"],
-    behavior: behaviors.WALL,
-    category: "solids",
+elements.white_hole = {
+    color: ["#FFFFFF", "#FFFFE0", "#E0FFFF"],
+    behavior: [
+        "XX|CR:plasma|XX",
+        "CR:light|XX|CR:light",
+        "XX|CR:plasma|XX"
+    ],
+    category: "special",
     state: "solid",
-    density: 7874,
-    desc: "A strong metal. Can rust when exposed to water or melt at very high temperatures.",
-    tempHigh: 1538,
-    stateHigh: "molten_iron",
+    density: 99999,
+    desc: "A cosmic anomaly that violently repels matter and constantly emits intense light and plasma.",
+    ignore: ["white_hole"],
+    canPlace: true,
+    temp: 5000,
     reactions: {
-        "water": { elem1: "rust", elem2: "water" },
-        "salt_water": { elem1: "rust", elem2: "salt_water" },
-        "acid": { elem1: "fire", elem2: "smoke" }
+        "fire": { elem1: "white_hole", elem2: "plasma" },
+        "plasma": { elem1: "white_hole", elem2: "plasma" },
+        "stone": { elem1: "white_hole", elem2: "sand" }
     }
 };
 
-elements.molten_iron = {
-    color: ["#FF4500", "#FF8C00", "#FFD700"],
-    behavior: behaviors.LIQUID,
-    category: "liquids",
-    state: "liquid",
-    density: 6980,
-    desc: "Superheated liquid iron. Extremely hot and dangerous!",
-    tempLow: 1537,
-    stateLow: "iron",
-    temp: 1600,
-    tempHigh: 2862,
-    stateHigh: "fire"
-};
-
-elements.rust = {
-    color: ["#B7410E", "#8B0000", "#A0522D"],
-    behavior: behaviors.POWDER,
-    category: "powders",
-    state: "solid",
-    density: 5240,
-    desc: "Iron oxide, formed when iron is exposed to moisture and oxygen over time.",
-    tempHigh: 1550,
-    stateHigh: "molten_iron"
-};
-
-elements.aerogel = {
-    color: ["#E0FFFF", "#AFEEEE", "#B0E0E6"],
-    behavior: behaviors.WALL,
-    category: "solids",
-    state: "solid",
-    density: 3,
-    desc: "A synthetic porous material of extremely low density, known for incredible thermal insulation.",
-    tempHigh: 1200,
-    stateHigh: "fire",
+elements.light = {
+    color: ["#FFFF99", "#FFFFFFFF", "#FFFACD"],
+    behavior: behaviors.LIGHT,
+    category: "energy",
+    state: "gas",
+    density: 0,
+    desc: "Pure photons emitted by high-energy sources like a white hole.",
+    temp: 1000,
+    tempLow: 10,
+    stateLow: "fire"
 };
