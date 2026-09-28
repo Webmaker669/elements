@@ -1,3 +1,4 @@
+console.log("iron.js loaded");
 elements.white_hole = {
     color: ["#FFFFFF", "#FFFFE0", "#E0FFFF"],
     behavior: [
