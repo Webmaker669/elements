@@ -2,13 +2,13 @@ console.log("carbon.js loaded");
 
 elements.carbon = {
     color: ["#262120", "#171312"],
-    behavior: behaviors.POWDER, // Or behaviors.WALL if you want it stationary like a solid
+    behavior: behaviors.WALL,
     category: "solids",
     state: "solid",
     density: 1800,
     hardness: 10,
     temp: 20,
-    tempHigh: 3500, // Melting point of carbon in Celsius (approximate)
+    tempHigh: 3500,
     stateHigh: "molten_carbon",
     desc: "Carbon, the building block of life and diamonds.",
     reactions: {
@@ -25,6 +25,8 @@ elements.molten_carbon = {
     temp: 3500,
     tempLow: 3400,
     stateLow: "carbon",
+    tempHigh: 6000,
+    stateHigh: "diamond",
     viscosity: 50000,
-    desc: "Extremely hot, molten carbon."
+    desc: "Extremely hot, molten carbon that can crystallize into diamond at extreme temperatures."
 };
