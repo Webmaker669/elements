@@ -1,13 +1,15 @@
 console.log("iron.js loaded");
 
-if (typeof categories !== "undefined") {
-    categories.ELEMENTS_PLUS = "Elements+";
+// 1. Check if the game's category array exists, then add your custom tab
+if (typeof elementCategories !== "undefined" && !elementCategories.includes("Elements+")) {
+    elementCategories.push("Elements+");
 }
 
+// 2. Define your elements and assign them to your new category
 elements.carbon = {
     color: ["#262120", "#171312"],
     behavior: behaviors.WALL,
-    category: "ELEMENTS_PLUS",
+    category: "Elements+",
     state: "solid",
     density: 1800,
     hardness: 10,
@@ -21,9 +23,9 @@ elements.carbon = {
 };
 
 elements.molten_carbon = {
-    color: ["#ff4500", "#ff8c00", "#ffcc00"],
+    color: ["#ff4500", "#ff8000", "#ffcc00"],
     behavior: behaviors.MOLTEN,
-    category: "ELEMENTS_PLUS",
+    category: "Elements+",
     state: "liquid",
     density: 1700,
     temp: 3500,
