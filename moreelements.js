@@ -1,9 +1,13 @@
-console.log("carbon.js loaded");
+console.log("iron.js loaded");
+
+if (typeof categories !== "undefined") {
+    categories.ELEMENTS_PLUS = "Elements+";
+}
 
 elements.carbon = {
     color: ["#262120", "#171312"],
     behavior: behaviors.WALL,
-    category: "solids",
+    category: "ELEMENTS_PLUS",
     state: "solid",
     density: 1800,
     hardness: 10,
@@ -19,7 +23,7 @@ elements.carbon = {
 elements.molten_carbon = {
     color: ["#ff4500", "#ff8c00", "#ffcc00"],
     behavior: behaviors.MOLTEN,
-    category: "liquids",
+    category: "ELEMENTS_PLUS",
     state: "liquid",
     density: 1700,
     temp: 3500,
