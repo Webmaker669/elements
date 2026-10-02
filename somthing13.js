@@ -1,22 +1,22 @@
 console.log("loaded");
 
 elements.carbon = {
-    color: ["#262120", "#171312"],
+    color: ["#222020", "#121010"],
     behavior: behaviors.WALL,
     category: "Elements+",
     state: "solid",
-    density: 2.21,
-    hardness: 1,
+    density: 2.26,
+    hardness: 2,
     tempHigh: 3500,
     stateHigh: "molten_carbon",
-    desc: "Carbon, the building block of life and diamonds.",
+    desc: "Graphite/Carbon, a standard solid form of carbon with a very high sublimation/melting point.",
     reactions: {
         "fire": { elem1: "carbon", elem2: "ember" }
     }
 };
 
 elements.molten_carbon = {
-    color: ["#ff4500", "#ff8000", "#ffcc00"],
+    color: ["#ff3300", "#ff6600", "#ffcc00"],
     behavior: behaviors.MOLTEN,
     category: "Elements+",
     state: "liquid",
@@ -24,21 +24,33 @@ elements.molten_carbon = {
     temp: 3500,
     tempLow: 3400,
     stateLow: "carbon",
-    tempHigh: 5000,
-    stateHigh: "diamond",
+    tempHigh: 4827,
+    stateHigh: "carbon_gas",
     viscosity: 50000,
-    desc: "Extremely hot, molten carbon that can crystallize into diamond at extreme temperatures."
+    desc: "Extremely hot liquid carbon."
+};
+
+elements.carbon_gas = {
+    color: ["#ffaa00", "#ff5500"],
+    behavior: behaviors.GAS,
+    category: "Elements+",
+    state: "gas",
+    density: 1.00,
+    temp: 4827,
+    tempLow: 4800,
+    stateLow: "molten_carbon",
+    desc: "Vaporized carbon gas at extreme temperatures."
 };
 
 elements.selenium = {
-    color: ["#4a4a4a", "#3d3d3d"],
+    color: ["#4a4a4a", "#2b2b2b"],
     behavior: behaviors.POWDER,
     category: "Elements+",
     state: "powder",
     density: 4.81,
-    tempHigh: 216,
+    tempHigh: 221,
     stateHigh: "molten_selenium",
-    desc: "Selenium is a nonmetal with semiconductor properties, found in metal sulfide ores.",
+    desc: "Selenium, a gray-to-black metalloid that melts at 221°C.",
     reactions: {
         "oxygen": {
             "elem1": "selenium_dioxide",             
@@ -49,31 +61,48 @@ elements.selenium = {
 };
 
 elements.molten_selenium = {
-    color: ["#ff6600", "#ff3300"],
+    color: ["#cc3300", "#ff4500"],
     behavior: behaviors.MOLTEN,
     category: "Elements+",
     state: "liquid",
-    density: 4.00,
-    temp: 216,
-    tempLow: 215,
+    density: 3.99,
+    temp: 221,
+    tempLow: 220,
     stateLow: "selenium",
-    desc: "Molten selenium.",
+    tempHigh: 685,
+    stateHigh: "selenium_gas",
+    desc: "Molten selenium liquid.",
     reactions: {
         "oxygen": {
             "elem1": "selenium_dioxide",
             "elem2": null,
-            "tempMin": 216
+            "tempMin": 221
         }
     }
 };
 
+elements.selenium_gas = {
+    color: ["#b8860b", "#daa520"],
+    behavior: behaviors.GAS,
+    category: "Elements+",
+    state: "gas",
+    density: 3.00,
+    temp: 685,
+    tempLow: 680,
+    stateLow: "molten_selenium",
+    desc: "Vaporized selenium gas."
+};
+
 elements.selenium_dioxide = {
-    color: ["#96ab54", "#718040"],
+    color: ["#e2e8d7", "#c2d1b1"],
     behavior: behaviors.GAS,
     category: "Elements+",
     state: "gas",
     density: 3.95,
-    desc: "A white crystalline compound that forms when selenium is heated in the presence of oxygen.",
+    temp: 315,
+    tempLow: 310,
+    stateLow: "selenium",
+    desc: "A white crystalline compound/gas formed when selenium reacts with oxygen.",
     reactions: {
         "water": {
             "elem1": "selenous_acid",
@@ -83,11 +112,14 @@ elements.selenium_dioxide = {
 };
 
 elements.selenous_acid = {
-    color: ["#b5c474", "#96ab54"],
+    color: ["#d0e198", "#b5c474"],
     behavior: behaviors.LIQUID,
     category: "Elements+",
     state: "liquid",
     density: 3.00,
+    temp: 20,
+    tempHigh: 100,
+    stateHigh: "selenium_dioxide",
     desc: "An acid formed by dissolving selenium dioxide in water."
 };
 
@@ -97,27 +129,39 @@ elements.nitrogen = {
     category: "Elements+",
     state: "gas",
     density: 1.25,
-    desc: "A colorless, odorless gas that makes up most of Earth's atmosphere."
+    desc: "A colorless, odorless gas."
 };
 
 elements.boron = {
-    color: ["#3b3b3b", "#4f4f4f"],
+    color: ["#3b3b3b", "#2c2c2c"],
     behavior: behaviors.POWDER,
     category: "Elements+",
     state: "powder",
     density: 2.34,
-    desc: "A low-abundance metalloid used in trace amounts to color diamonds blue."
+    desc: "A dark metalloid element."
 };
 
 elements.uranium = {
-    color: ["#32cd32", "#006400"],
+    color: ["#32cd32", "#228b22"],
     behavior: behaviors.POWDER,
     category: "Elements+",
     state: "solid",
     density: 19.1,
     tempHigh: 1132,
     stateHigh: "molten_uranium",
-    desc: "A radioactive metallic element that emits natural radiation."
+    desc: "A dense, radioactive actinide metal."
+};
+
+elements.molten_uranium = {
+    color: ["#ff4500", "#ff8c00"],
+    behavior: behaviors.MOLTEN,
+    category: "Elements+",
+    state: "liquid",
+    density: 17.3,
+    temp: 1132,
+    tempLow: 1130,
+    stateLow: "uranium",
+    desc: "Molten radioactive uranium metal."
 };
 
 elements.diamond = {
@@ -127,7 +171,7 @@ elements.diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    desc: "A hard, crystalline form of pure carbon.",
+    desc: "A pure carbon allotrope with extreme hardness, stable at high temperatures without melting.",
     reactions: {
         "hydrogen": {
             "elem1": "red_diamond",
@@ -164,7 +208,7 @@ elements.red_diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    desc: "An extremely rare red diamond formed by lattice deformation via hydrogen at high temperatures."
+    desc: "An extremely rare red diamond created by structural lattice deformation."
 };
 
 elements.yellow_diamond = {
@@ -174,7 +218,7 @@ elements.yellow_diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    desc: "A yellow diamond colored by nitrogen impurities trapped in the carbon lattice."
+    desc: "A yellow diamond colored by nitrogen impurities."
 };
 
 elements.blue_diamond = {
@@ -184,7 +228,7 @@ elements.blue_diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    desc: "A rare blue diamond colored by trace amounts of boron."
+    desc: "A blue diamond colored by trace boron impurities."
 };
 
 elements.green_diamond = {
@@ -194,5 +238,60 @@ elements.green_diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    desc: "A green diamond whose color is caused by natural or artificial radiation exposure."
+    desc: "A green diamond colored by natural or radiation exposure."
+};
+
+elements.titanium = {
+    color: ["#D1D2D1", "#B2B3B2", "#909290"],
+    behavior: behaviors.WALL,
+    category: "Elements+",
+    state: "solid",
+    density: 4.51,
+    hardness: 6,
+    tempHigh: 1668,
+    stateHigh: "molten_titanium",
+    desc: "A strong, corrosion-resistant lustrous transition metal."
+};
+
+elements.molten_titanium = {
+    color: ["#ff4500", "#ff8c00", "#ffd700"],
+    behavior: behaviors.MOLTEN,
+    category: "Elements+",
+    state: "liquid",
+    density: 4.11,
+    temp: 1668,
+    tempLow: 1667,
+    stateLow: "titanium",
+    desc: "Molten liquid titanium metal.",
+    reactions: { 
+        "nitrogen": {
+            "elem1": "titanium_nitride",
+            "elem2": null,
+            "tempMin": 1080
+        }
+    }
+};
+
+elements.titanium_nitride = {
+    color: ["#FFD700", "#DAA520", "#B8860B"],
+    behavior: behaviors.WALL,
+    category: "Elements+",
+    state: "solid",
+    density: 5.40,
+    hardness: 9,
+    tempHigh: 2930,
+    stateHigh: "molten_titanium_nitride",
+    desc: "Titanium nitride, an extremely hard ceramic material with a golden appearance used for surface coatings."
+};
+
+elements.molten_titanium_nitride = {
+    color: ["#ff4500", "#ff8c00", "#ffd700"],
+    behavior: behaviors.MOLTEN,
+    category: "Elements+",
+    state: "liquid",
+    density: 4.90,
+    temp: 2930,
+    tempLow: 2920,
+    stateLow: "titanium_nitride",
+    desc: "Molten liquid titanium nitride."
 };
