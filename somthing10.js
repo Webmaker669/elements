@@ -101,8 +101,12 @@ elements.diamond = {
     tempHigh: 5500,
     stateHigh: "carbon",
     desc: "A hard, crystalline form of pure carbon.",
-    reactions: {  "neutron": { "elem1": "red_diamond", "elem2": "null" "tempMin": 932 }
-}
+    reactions: {
+        "neutron": {
+            "elem1": "red_diamond",
+            "tempMin": 932
+        }
+    }
 };
 
 elements.red_diamond = {
