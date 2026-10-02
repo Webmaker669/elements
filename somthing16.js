@@ -23,11 +23,11 @@ elements.molten_carbon = {
     density: 2.00,
     temp: 3500,
     tempLow: 3400,
-    stateLow: "carbon",
+    stateLow: "diamond", 
     tempHigh: 4827,
     stateHigh: "carbon_gas",
     viscosity: 50000,
-    desc: "Extremely hot liquid carbon."
+    desc: "Extremely hot liquid carbon that crystallizes into diamond upon controlled cooling."
 };
 
 elements.carbon_gas = {
