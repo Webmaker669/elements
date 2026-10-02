@@ -62,7 +62,7 @@ elements.selenium = {
 
 elements.molten_selenium = {
     color: ["#ff6600", "#ff3300"],
-    behavior: behaviors.LIQUID,
+    behavior: behaviors.MOLTEN,
     category: "Elements+",
     state: "liquid",
     density: 4.00,
