@@ -24,7 +24,7 @@ elements.molten_carbon = {
     temp: 3500,
     tempLow: 3400,
     stateLow: "carbon",
-    tempHigh: 6000,
+    tempHigh: 5000,
     stateHigh: "diamond",
     viscosity: 50000,
     desc: "Extremely hot, molten carbon that can crystallize into diamond at extreme temperatures."
@@ -37,8 +37,8 @@ elements.diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    tempHigh: 4000,
-    stateHigh: "molten_carbon",
+    tempHigh: 5500,
+    stateHigh: "carbon",
     desc: "A hard, crystalline form of pure carbon."
 };
 
@@ -53,8 +53,8 @@ elements.selenium = {
     desc: "Selenium is a nonmetal with semiconductor properties, found in metal sulfide ores.",
     reactions: {
         "oxygen": {
-            "elem1": "selenium",             
-            "elem2": "selenium_dioxide", 
+            "elem1": "selenium_dioxide",             
+            "elem2": null, 
             "tempMin": 315
         }
     }
@@ -78,14 +78,11 @@ elements.selenium_dioxide = {
     category: "Elements+",
     state: "gas",
     density: 3.95,
-    temp: 315,
-    tempLow: 314,
-    stateLow: "selenium",
     desc: "A white crystalline compound that forms when selenium is heated in the presence of oxygen.",
     reactions: {
         "water": {
-            "elem1": "selenium_dioxide",
-            "elem2": "selenous_acid"
+            "elem1": "selenous_acid",
+            "elem2": null
         }
     }
 };
@@ -96,10 +93,5 @@ elements.selenous_acid = {
     category: "Elements+",
     state: "liquid",
     density: 3.00,
-    temp: 20,
-    tempHigh: 100,
-    stateHigh: "selenium_dioxide",
-    tempLow: 0,
-    stateLow: "water",
     desc: "An acid formed by dissolving selenium dioxide in water."
 };
