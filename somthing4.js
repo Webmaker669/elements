@@ -48,7 +48,7 @@ elements.selenium = {
     category: "Elements+",
     state: "powder",
     density: 4.81,
-    tempHigh: 221,
+    tempHigh: 216,
     stateHigh: "molten_selenium",
     desc: "Selenium is a nonmetal with semiconductor properties, found in metal sulfide ores.",
     reactions: {
@@ -66,8 +66,8 @@ elements.molten_selenium = {
     category: "Elements+",
     state: "liquid",
     density: 4.00,
-    temp: 221,
-    tempLow: 220,
+    temp: 216,
+    tempLow: 215,
     stateLow: "selenium",
     desc: "Molten selenium."
 };
@@ -78,6 +78,9 @@ elements.selenium_dioxide = {
     category: "Elements+",
     state: "gas",
     density: 3.95,
+    temp: 315,
+    tempLow: 314,
+    stateLow: "selenium",
     desc: "A white crystalline compound that forms when selenium is heated in the presence of oxygen.",
     reactions: {
         "water": {
@@ -93,5 +96,10 @@ elements.selenous_acid = {
     category: "Elements+",
     state: "liquid",
     density: 3.00,
+    temp: 20,
+    tempHigh: 100,
+    stateHigh: "selenium_dioxide",
+    tempLow: 0,
+    stateLow: "water",
     desc: "An acid formed by dissolving selenium dioxide in water."
 };
