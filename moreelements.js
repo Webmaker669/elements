@@ -1,10 +1,4 @@
 console.log("iron.js loaded");
-
-// 1. Check if the game's category array exists, then add your custom tab
-if (typeof elementCategories !== "undefined" && !elementCategories.includes("Elements+")) {
-    elementCategories.push("Elements+");
-}
-
 // 2. Define your elements and assign them to your new category
 elements.carbon = {
     color: ["#262120", "#171312"],
