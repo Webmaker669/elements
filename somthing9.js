@@ -30,18 +30,6 @@ elements.molten_carbon = {
     desc: "Extremely hot, molten carbon that can crystallize into diamond at extreme temperatures."
 };
 
-elements.diamond = {
-    color: ["#b9f2ff", "#ffffff", "#8bf0ff"],
-    behavior: behaviors.WALL,
-    category: "Elements+",
-    state: "solid",
-    density: 3.51,
-    hardness: 10,
-    tempHigh: 5500,
-    stateHigh: "carbon",
-    desc: "A hard, crystalline form of pure carbon."
-};
-
 elements.selenium = {
     color: ["#4a4a4a", "#3d3d3d"],
     behavior: behaviors.POWDER,
@@ -101,4 +89,30 @@ elements.selenous_acid = {
     state: "liquid",
     density: 3.00,
     desc: "An acid formed by dissolving selenium dioxide in water."
+};
+
+elements.diamond = {
+    color: ["#b9f2ff", "#ffffff", "#8bf0ff"],
+    behavior: behaviors.WALL,
+    category: "Elements+",
+    state: "solid",
+    density: 3.51,
+    hardness: 10,
+    tempHigh: 5500,
+    stateHigh: "carbon",
+    desc: "A hard, crystalline form of pure carbon.",
+    reactions: {  "neutron": { "elem1": "red_diamond", "elem2": "null" "tempMin": 932 }
+}
+};
+
+elements.red_diamond = {
+    color: ["#F84B3F", "#FC6A5F", "#DA3A2F"],
+    behavior: behaviors.WALL,
+    category: "Elements+",
+    state: "solid",
+    density: 3.51,
+    hardness: 10,
+    tempHigh: 5500,
+    stateHigh: "carbon",
+    desc: "A hard, crystalline form of pure carbon thats colored by being heated with neutrons."
 };
