@@ -49,11 +49,11 @@ elements.selenium = {
     state: "powder",
     density: 4.81,
     tempHigh: 221,
-    stateHigh: "molten_selenium", // Required because molten_selenium is defined manually
+    stateHigh: "molten_selenium",
     desc: "Selenium is a nonmetal with semiconductor properties, found in metal sulfide ores.",
     reactions: {
         "oxygen": {
-            "elem1": null,             
+            "elem1": "selenium",             
             "elem2": "selenium_dioxide", 
             "tempMin": 315
         }
@@ -81,7 +81,7 @@ elements.selenium_dioxide = {
     desc: "A white crystalline compound that forms when selenium is heated in the presence of oxygen.",
     reactions: {
         "water": {
-            "elem1": null,
+            "elem1": "selenium_dioxide",
             "elem2": "selenous_acid"
         }
     }
