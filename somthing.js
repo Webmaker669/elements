@@ -17,7 +17,7 @@ elements.carbon = {
 elements.molten_carbon = {
     color: ["#ff4500", "#ff8000", "#ffcc00"],
     behavior: behaviors.MOLTEN,
-    category: "Elements+",
+    category: "states",
     state: "liquid",
     density: 1700,
     temp: 3500,
