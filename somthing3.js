@@ -49,6 +49,7 @@ elements.selenium = {
     state: "powder",
     density: 4.81,
     tempHigh: 221,
+    stateHigh: "molten_selenium", // Required because molten_selenium is defined manually
     desc: "Selenium is a nonmetal with semiconductor properties, found in metal sulfide ores.",
     reactions: {
         "oxygen": {
