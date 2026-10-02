@@ -55,7 +55,7 @@ elements.selenium = {
         "oxygen": {
             "elem1": "selenium_dioxide",             
             "elem2": null, 
-            "tempMin": 200
+            "tempMin": 215
         }
     }
 };
@@ -74,7 +74,7 @@ elements.molten_selenium = {
         "oxygen": {
             "elem1": "selenium_dioxide",
             "elem2": null,
-            "tempMin": 220
+            "tempMin": 216
         }
     }
 };
