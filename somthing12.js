@@ -21,8 +21,8 @@ elements.molten_carbon = {
     category: "Elements+",
     state: "liquid",
     density: 2.00,
-    temp: 500,
-    tempLow: 490,
+    temp: 3500,
+    tempLow: 3400,
     stateLow: "carbon",
     tempHigh: 5000,
     stateHigh: "diamond",
@@ -98,13 +98,12 @@ elements.diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    tempHigh: 500,
-    stateHigh: "molten_carbon",
     desc: "A hard, crystalline form of pure carbon.",
     reactions: {
-        "neutron": {
+        "hydrogen": {
             "elem1": "red_diamond",
-            "tempMin": 932
+            "elem2": null,
+            "tempMin": 500
         }
     }
 };
@@ -116,7 +115,5 @@ elements.red_diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    tempHigh: 500,
-    stateHigh: "molten_carbon",
-    desc: "A hard, crystalline form of pure carbon thats colored by being heated with neutrons."
+    desc: "A hard, crystalline form of pure carbon colored by hydrogen at high temperatures."
 };
