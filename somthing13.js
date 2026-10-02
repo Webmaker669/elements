@@ -91,6 +91,35 @@ elements.selenous_acid = {
     desc: "An acid formed by dissolving selenium dioxide in water."
 };
 
+elements.nitrogen = {
+    color: ["#e0e0e0", "#f0f0f0"],
+    behavior: behaviors.GAS,
+    category: "Elements+",
+    state: "gas",
+    density: 1.25,
+    desc: "A colorless, odorless gas that makes up most of Earth's atmosphere."
+};
+
+elements.boron = {
+    color: ["#3b3b3b", "#4f4f4f"],
+    behavior: behaviors.POWDER,
+    category: "Elements+",
+    state: "powder",
+    density: 2.34,
+    desc: "A low-abundance metalloid used in trace amounts to color diamonds blue."
+};
+
+elements.uranium = {
+    color: ["#32cd32", "#006400"],
+    behavior: behaviors.POWDER,
+    category: "Elements+",
+    state: "solid",
+    density: 19.1,
+    tempHigh: 1132,
+    stateHigh: "molten_uranium",
+    desc: "A radioactive metallic element that emits natural radiation."
+};
+
 elements.diamond = {
     color: ["#b9f2ff", "#ffffff", "#8bf0ff"],
     behavior: behaviors.WALL,
@@ -104,6 +133,26 @@ elements.diamond = {
             "elem1": "red_diamond",
             "elem2": null,
             "tempMin": 500
+        },
+        "nitrogen": {
+            "elem1": "yellow_diamond",
+            "elem2": null,
+            "tempMin": 600
+        },
+        "boron": {
+            "elem1": "blue_diamond",
+            "elem2": null,
+            "tempMin": 400
+        },
+        "uranium": {
+            "elem1": "green_diamond",
+            "elem2": null,
+            "tempMin": 100
+        },
+        "neutron": {
+            "elem1": "green_diamond",
+            "elem2": null,
+            "tempMin": 200
         }
     }
 };
@@ -115,5 +164,35 @@ elements.red_diamond = {
     state: "solid",
     density: 3.51,
     hardness: 10,
-    desc: "A hard, crystalline form of pure carbon colored by hydrogen at high temperatures."
+    desc: "An extremely rare red diamond formed by lattice deformation via hydrogen at high temperatures."
+};
+
+elements.yellow_diamond = {
+    color: ["#ffe873", "#ffd700", "#ffc72c"],
+    behavior: behaviors.WALL,
+    category: "Elements+",
+    state: "solid",
+    density: 3.51,
+    hardness: 10,
+    desc: "A yellow diamond colored by nitrogen impurities trapped in the carbon lattice."
+};
+
+elements.blue_diamond = {
+    color: ["#73c2fb", "#1e90ff", "#00bfff"],
+    behavior: behaviors.WALL,
+    category: "Elements+",
+    state: "solid",
+    density: 3.51,
+    hardness: 10,
+    desc: "A rare blue diamond colored by trace amounts of boron."
+};
+
+elements.green_diamond = {
+    color: ["#50c878", "#2e8b57", "#006400"],
+    behavior: behaviors.WALL,
+    category: "Elements+",
+    state: "solid",
+    density: 3.51,
+    hardness: 10,
+    desc: "A green diamond whose color is caused by natural or artificial radiation exposure."
 };
