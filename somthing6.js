@@ -55,7 +55,7 @@ elements.selenium = {
         "oxygen": {
             "elem1": "selenium_dioxide",             
             "elem2": null, 
-            "tempMin": 315
+            "tempMin": 200
         }
     }
 };
@@ -69,7 +69,14 @@ elements.molten_selenium = {
     temp: 216,
     tempLow: 215,
     stateLow: "selenium",
-    desc: "Molten selenium."
+    desc: "Molten selenium.",
+    reactions: {
+        "oxygen": {
+            "elem1": "selenium_dioxide",
+            "elem2": null,
+            "tempMin": 220
+        }
+    }
 };
 
 elements.selenium_dioxide = {
