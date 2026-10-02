@@ -49,7 +49,6 @@ elements.selenium = {
     state: "powder",
     density: 4.81,
     tempHigh: 221,
-    stateHigh: "molten_selenium",
     desc: "Selenium is a nonmetal with semiconductor properties, found in metal sulfide ores.",
     reactions: {
         "oxygen": {
