@@ -28,3 +28,19 @@ elements.molten_carbon = {
     viscosity: 50000,
     desc: "Extremely hot, molten carbon that can crystallize into diamond at extreme temperatures."
 };
+
+selenium = {
+    color: ["#4a4a4a", "#3d3d3d"],
+    behavior: behaviors.WALL,
+    category: "Elements+",
+    state: "solid",
+    density: 4.81,
+    desc: "Selenium is found in metal sulfide ores, where it substitutes for sulfur.",
+    reactions: {
+        "oxygen": {
+            "elem1": null,              
+            "elem2": "selenium_dioxide", 
+            "tempMin": 800              
+        }
+    }
+}
