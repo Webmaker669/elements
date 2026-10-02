@@ -1,4 +1,5 @@
 console.log("loaded");
+
 elements.carbon = {
     color: ["#262120", "#171312"],
     behavior: behaviors.WALL,
@@ -29,7 +30,7 @@ elements.molten_carbon = {
     desc: "Extremely hot, molten carbon that can crystallize into diamond at extreme temperatures."
 };
 
-selenium = {
+elements.selenium = {
     color: ["#4a4a4a", "#3d3d3d"],
     behavior: behaviors.WALL,
     category: "Elements+",
@@ -38,9 +39,9 @@ selenium = {
     desc: "Selenium is found in metal sulfide ores, where it substitutes for sulfur.",
     reactions: {
         "oxygen": {
-            "elem1": null,              
+            "elem1": null,             
             "elem2": "selenium_dioxide", 
-            "tempMin": 800              
+            "tempMin": 800             
         }
     }
-}
+};
