@@ -1,17 +1,27 @@
-elements.pressure = {
-  color: "#F2947C",
-  category: "tools",
-  desc: "Adds pressure to pixels.",
-  tool: function(pixel) {
-    // Ensure pixel exists and is a valid object
-    if (!pixel || typeof pixel !== "object") return;
+// Run after the game has loaded so updateStats exists
+runAfterLoad(function() {
+  const originalUpdateStats = updateStats;
 
-    // Initialize pressure if it's missing, null, or NaN
-    if (pixel.pressure === undefined || pixel.pressure === null || Number.isNaN(pixel.pressure)) {
-      pixel.pressure = 0;
+  updateStats = function() {
+    originalUpdateStats.apply(this, arguments);
+
+    const pixel = getPixel(mousePos.x, mousePos.y);
+    if (!pixel || pixel.pressure === undefined) return;
+
+    const statsDiv = document.getElementById("stats");
+    if (!statsDiv) return;
+
+    const span = document.createElement("span");
+    span.className = "stat";
+    span.id = "stat-pressure";
+    span.textContent = "Pres:" + Math.round(pixel.pressure);
+
+    // Put it right after the temperature stat if present, otherwise at the end
+    const tempStat = document.getElementById("stat-temp");
+    if (tempStat && tempStat.parentNode === statsDiv) {
+      tempStat.after(span);
+    } else {
+      statsDiv.appendChild(span);
     }
-
-    // Actually apply the tool's effect (adjust the amount as needed)
-    pixel.pressure += 10;
-  }
-};
+  };
+});
