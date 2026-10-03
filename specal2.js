@@ -1,27 +1,30 @@
-// Run after the game has loaded so updateStats exists
 runAfterLoad(function() {
-  const originalUpdateStats = updateStats;
-
-  updateStats = function() {
-    originalUpdateStats.apply(this, arguments);
-
-    const pixel = getPixel(mousePos.x, mousePos.y);
-    if (!pixel || pixel.pressure === undefined) return;
-
-    const statsDiv = document.getElementById("stats");
-    if (!statsDiv) return;
+  // 1. Add the span whenever the stats bar is (re)built
+  const origInit = initStats;
+  initStats = function() {
+    const ok = origInit.apply(this, arguments);
+    if (!ok) return ok;
 
     const span = document.createElement("span");
-    span.className = "stat";
     span.id = "stat-pressure";
-    span.textContent = "Pres:" + Math.round(pixel.pressure);
-
-    // Put it right after the temperature stat if present, otherwise at the end
-    const tempStat = document.getElementById("stat-temp");
-    if (tempStat && tempStat.parentNode === statsDiv) {
-      tempStat.after(span);
-    } else {
-      statsDiv.appendChild(span);
-    }
+    span.className = "stat";
+    statEls.temperature.after(span);
+    statEls.pressure = span;
+    return ok;
   };
+
+  // 2. Fill it each update
+  const origUpdate = updateStats;
+  updateStats = function() {
+    origUpdate.apply(this, arguments);
+    if (!statEls || !statEls.pressure) return;
+
+    const col = pixelMap[mousePos.x];
+    const p = col ? col[mousePos.y] : undefined;
+    const has = p !== undefined && !hiding;
+    setStat("pressure", has ? "Pres:" + Math.round(p.pressure || 0) : null, has);
+  };
+
+  // Rebuild the bar now so the new span exists
+  initStats();
 });
