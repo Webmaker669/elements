@@ -10,5 +10,5 @@ element.uranium_fuel = {
   tick: function(pixel) {
     pixel.temp += 10;
   },
-  behavior: behaviors.POWDER
+  behavior: behaviors.WALL
 };
