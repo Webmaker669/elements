@@ -8,7 +8,7 @@ elements.uranium_fuel = {
   tempLow: 0,
   stateLow: "uranium",
   tick: function(pixel) {
-    pixel.temp += 10;
+    pixel.temp += 50;
     pixelTempCheck(pixel); // Evaluates temperature triggers for state changes
   },
   behavior: behaviors.WALL
