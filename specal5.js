@@ -1,4 +1,4 @@
-element.uranium_fuel = {
+elements.uranium_fuel = {
   color: ["#90EE90", "#228B22"],
   category: "energy",
   state: "solid",
@@ -9,6 +9,7 @@ element.uranium_fuel = {
   stateLow: "uranium",
   tick: function(pixel) {
     pixel.temp += 10;
+    pixelTempCheck(pixel); // needed so it actually changes state
   },
   behavior: behaviors.WALL
 };
