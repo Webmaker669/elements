@@ -8,8 +8,8 @@ elements.uranium_fuel = {
   tempLow: 0,
   stateLow: "uranium",
   tick: function(pixel) {
-    pixel.temp += 50;
-    pixelTempCheck(pixel); // Evaluates temperature triggers for state changes
+    pixel.temp += 15; // Balanced heat output
+    pixelTempCheck(pixel);
   },
   behavior: behaviors.WALL
 };
@@ -20,5 +20,7 @@ elements.coolant = {
   state: "liquid",
   density: 1000,
   temp: -100,
-  behavior: behaviors.LIQUID
+  tempHigh: 800, // Raised so it can handle heavy heat without instantly boiling
+  stateHigh: "smoke",
+  behavior: behaviors.LIQUID // Allows the coolant to flow around the uranium
 };
