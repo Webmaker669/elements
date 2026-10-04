@@ -20,7 +20,5 @@ elements.coolant = {
   state: "liquid",
   density: 1000,
   temp: -100,
-  tempHigh: 137,
-  stateHigh: "smoke",
   behavior: behaviors.LIQUID
 };
