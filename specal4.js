@@ -1,6 +1,5 @@
 element.uranium_fuel = {
   color: ["#90EE90", "#228B22"],
-  behavior: behaviors.SOLID,
   category: "energy",
   state: "solid",
   tempHigh: 4000,
@@ -10,7 +9,7 @@ element.uranium_fuel = {
   tick: function(pixel) {
     pixel.temp += 10;
   },
-  RADPOWDER: [
+  behavior: [
     "XX|XX|XX",
     "XX|RL:radiation%1|XX",
     "M2|M1|M2"
