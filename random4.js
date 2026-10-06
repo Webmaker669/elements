@@ -16,7 +16,7 @@ elements.frying_oil = {
 
 elements.french_fries = {
   color: ["#F0B054", "#FFD700"],
-  behavior: behaviors.SOLID,
+  behavior: behaviors.POWDER,
   state: "powder",
   category: "food",
   density: 300,
