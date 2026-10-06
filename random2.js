@@ -20,7 +20,7 @@ elements.french_fries = {
 elements.cooked_fries = {
   color: ["#8B4513", "#D2691E"],
   behavior: behaviors.POWDER,
-  state: "soild",
+  state: "powder",
   category: "food",
   density: 290,
 };
