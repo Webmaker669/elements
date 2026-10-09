@@ -1,5 +1,5 @@
 tool.url_video = {
-  color: ["#8B4513"]
+  color: "#8B4513"
 };
 
 elements.screen = {
