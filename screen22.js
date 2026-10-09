@@ -6,7 +6,7 @@ elements.screen = {
   behavior: behaviors.WALL // Changed from behaviors.SOLID to a valid built-in behavior type
 };
 
-tool.url_video = {
+tools.url_video = {
   color: "#8B4513",
   func: function(pixel, x, y) {
     let videoUrl = prompt("Enter the video URL:");
