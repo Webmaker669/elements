@@ -4,6 +4,6 @@ elements.e_filter = {
   category: "machines", 
   state: "solid",
   tick: function(pixel) {
-    changePixel(pixel, "explosion");
-  }
+    tryMove(pixel, pixel.x, pixel.y - 1);  }
+
 };
