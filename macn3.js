@@ -3,7 +3,8 @@ elements.rdx = {
   category: "powders",
   state: "powder",
   behavior: behaviors.POWDER,
-  if (pixel.charge) {
-    changePixel(p, "explosion")
+  density: 1500,
+  tick: pixel => {
+    if (pixel.charge) changePixel(pixel, "explosion");
   }
-}
+};
