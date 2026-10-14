@@ -1,5 +1,5 @@
 elements.rdx = {
-  color: ["#NH830M", "#NH932M"],
+  color: ["#FF8300", "#FFA500"],
   category: "powders",
   state: "powder",
   behavior: behaviors.POWDER
