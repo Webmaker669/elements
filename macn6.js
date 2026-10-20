@@ -7,12 +7,13 @@ elements.little_boy_bomb = {
     let belowX = pixel.x;
     let belowY = pixel.y + 1;
     
-    if (isEmpty(belowX, belowY, true)) {
-      pixel.wasFalling = true; 
-    } else {
-      if (pixel.wasFalling === true) {
-        changePixel(pixel, "flash");
-      }
+    if (pixel.hasSpawned === undefined) {
+      pixel.hasSpawned = true;
+      return; // Skip the first frame detonation check
+    }
+
+    if (!isEmpty(belowX, belowY, true)) {
+      explodeAt(pixel.x, pixel.y, 20); 
     }
   }
 };
