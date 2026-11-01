@@ -9,11 +9,11 @@ elements.cow = {
 };
 
 elements.chicken = {
-    color: "C4A584",
+    color: "#C4A584",
     behavior: behaviors.POWDER,
     state: "powder",
     category: "life",
-    tick: fucntion(pixel) {
+    tick: function(pixel) {
         doMovement(pixel);
     }
 };
