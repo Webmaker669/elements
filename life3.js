@@ -4,7 +4,9 @@ elements.cow = {
     state: "powder",
     category: "life",
     tick: function(pixel) {
-        doMovement(pixel);
+        if (isEmpty(pixel.x, pixel.y + 1)) {
+            movePixel(pixel, pixel.x, pixel.y + 1);
+        }
     }
 };
 
@@ -14,6 +16,8 @@ elements.chicken = {
     state: "powder",
     category: "life",
     tick: function(pixel) {
-        doMovement(pixel);
+        if (isEmpty(pixel.x, pixel.y + 1)) {
+            movePixel(pixel, pixel.x, pixel.y + 1);
+        }
     }
 };
