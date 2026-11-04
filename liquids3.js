@@ -8,8 +8,9 @@ elements.gasoline = {
     burnTime: 350,
     burnInto: ["smoke","fire"],
     fireColor: "#FF4500",
-    elements.gasoline.reactions = {
+    reactions: {
         styrofoam: { elem1: "napalm", elem2: null, chance: 0.05 }
+    }
 };
 
 elements.methanol = {
