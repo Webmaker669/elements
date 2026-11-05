@@ -86,4 +86,30 @@ elements.dimethyl_sulfoxide_crystal = {
     hidden: true
 };
 
+elements.liquid_pain = {
+    color: ["#8b0a1a","#a30d1f"],
+    behavior: behaviors.LIQUID,
+    category: "liquids",
+    state: "liquid",
+    density: 1250,
+    viscosity: 800,
+    reactions: {
+        human: { elem2: "blood", chance: 0.4 },
+        meat: { elem2: null, chance: 0.2 }
+    },
+    tick: function(pixel) {
+        if (Math.random() < 0.004 && isEmpty(pixel.x, pixel.y - 1)) {
+            changePixel(pixel, "liquid_pain_crystal");
+        }
+    }
+};
 
+elements.liquid_pain_crystal = {
+    color: ["#b3122a","#d12a40"],
+    behavior: behaviors.WALL,
+    category: "solids",
+    state: "solid",
+    density: 1400,
+    tempHigh: 120,
+    stateHigh: "explosion"
+};
