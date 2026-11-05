@@ -61,3 +61,29 @@ elements.napalm = {
     burnInto: ["smoke","fire"],
     fireColor: "#FF4500"
 };
+
+elements.dimethyl_sulfoxide = {
+    color: ["#eef4f7","#e2ebf0"],
+    behavior: behaviors.LIQUID,
+    category: "liquids",
+    state: "liquid",
+    density: 1100,
+    tempLow: 18.5,
+    stateLow: "dimethyl_sulfoxide_crystal",
+    tempHigh: 189,
+    stateHigh: "steam"
+};
+
+elements.dimethyl_sulfoxide_crystal = {
+    color: ["#f2f8fb","#dcebf2","#e8f3f8"],
+    behavior: behaviors.WALL,
+    category: "states",
+    state: "solid",
+    density: 1180,
+    temp: 10,
+    tempHigh: 18.5,
+    stateHigh: "dimethyl_sulfoxide",
+    hidden: true
+};
+
+
