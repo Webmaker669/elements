@@ -94,7 +94,8 @@ elements.liquid_pain = {
     density: 1250,
     viscosity: 800,
     reactions: {
-        human: { elem2: "blood", chance: 0.4 },
+        body: { elem2: "blood", chance: 0.4 },
+        head: { elem2: "blood", chance: 0.4 },
         meat: { elem2: null, chance: 0.2 }
     },
     tick: function(pixel) {
