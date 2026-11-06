@@ -1,6 +1,6 @@
 Object.keys(elements).forEach(function(elemName) {
   elements[elemName].hidden = true;
-};
+});
 
 if (elements.water) elements.water.hidden = false;
 if (elements.sand) elements.sand.hidden = false;
