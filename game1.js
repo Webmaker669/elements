@@ -1,7 +1,8 @@
-for (var elemName in elements) {
+Object.keys(elements).forEach(function(elemName) {
   elements[elemName].hidden = true;
-}
-if (elements.water) elements.water.hidden = false; 
+};
+
+if (elements.water) elements.water.hidden = false;
 if (elements.sand) elements.sand.hidden = false;
 
 elements.sell = {
@@ -10,5 +11,14 @@ elements.sell = {
   category: "shop",
   state: "solid",
   density: 1,
-  hidden: true
+};
+
+if (!elements.sand.reactions) elements.sand.reactions = {}
+
+elements.sand.reactions.fire = {
+  elem1: "glass",
+  elem2: null,
+  after: function() {
+    elements.glass.hidden = false;
+  }
 };
