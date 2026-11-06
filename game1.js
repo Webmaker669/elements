@@ -1,8 +1,8 @@
 for (var elemName in elements) {
-  elements[elemName].Hidden = true;
+  elements[elemName].hidden = true;
 }
-if (element.water) elements.water.hidden = false; 
-if (element.water) elements.water.hidden = false;
+if (elements.water) elements.water.hidden = false; 
+if (elements.sand) elements.sand.hidden = false;
 
 elements.sell = {
   color: ["#ff0000"],
