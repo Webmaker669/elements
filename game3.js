@@ -19,9 +19,11 @@ elements.sell = {
 if (!elements.sand.reactions) elements.sand.reactions = {}
 
 elements.sand.reactions.fire = {
-  elem1: "glass",
+  elem1: "glass", // This spawns the built-in Sandboxels glass element
   elem2: null,
   after: function() {
-    elements.glass.hidden = false;
+    if (elements.glass) {
+      elements.glass.hidden = false;
+    }
   }
 };
