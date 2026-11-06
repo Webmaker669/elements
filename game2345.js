@@ -6,7 +6,7 @@ if (elements.water) elements.water.hidden = false;
 if (elements.sand) elements.sand.hidden = false;
 if (elements.heat) elements.heat.hidden = false;
 if (elements.cool) elements.cool.hidden = false;
-
+if (elements.fire) elements.fire.hidden = false;
 
 elements.sell = {
   color: ["#ff0000"],
