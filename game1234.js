@@ -4,6 +4,9 @@ Object.keys(elements).forEach(function(elemName) {
 
 if (elements.water) elements.water.hidden = false;
 if (elements.sand) elements.sand.hidden = false;
+if (tools.heat) tools.heat.hidden = false;
+if (tool.cool) tool.cool.hidden = false;
+
 
 elements.sell = {
   color: ["#ff0000"],
