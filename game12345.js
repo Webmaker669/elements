@@ -2,6 +2,8 @@ Object.keys(elements).forEach(function(elemName) {
   elements[elemName].hidden = true;
 });
 
+console.log(tools);
+
 if (elements.water) elements.water.hidden = false;
 if (elements.sand) elements.sand.hidden = false;
 if (tools.heat) tools.heat.hidden = false;
