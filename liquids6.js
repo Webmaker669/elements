@@ -112,5 +112,6 @@ elements.liquid_pain_crystal = {
     state: "solid",
     density: 1400,
     tempHigh: 120,
-    stateHigh: "explosion"
+    stateHigh: "explosion",
+    hidden: true
 };
